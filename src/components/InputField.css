@@ -1,0 +1,57 @@
+/* src/components/InputField.css */
+
+.input-field-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    transition: border 0.3s, background 0.3s;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #00e9e9;
+    background: #ffffff;
+  }
+  
+  .input-label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #aaa;
+    font-size: 16px;
+    transition: 0.2s ease all;
+  }
+  
+  .input-field-container.focused .input-label,
+  .input-field-container:focus-within .input-label {
+    top: -20px;
+    left: 5px;
+    font-size: 12px;
+    color: #00e9e9;
+    background-color: #33083a;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .input-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+  }
+  
+  .input-select:focus {
+    outline: none;
+    border-color: #00e9e9;
+  }

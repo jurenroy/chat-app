@@ -1,38 +1,179 @@
+/* src/App.css */
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #e8f0fe;
+  color: #1a1a1a;
+  max-width: 70%;
+}
+
+.message:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+.white-header{
+  color: #ffffff;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.custom-button {
+  padding: 10px 15px;
+  background-color: #00e9e9; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 233, 233, 0.5), 0 0 30px rgba(0, 233, 233, 0.3); /* Glowing effect */
+  width: 200px;
+  font-weight: bolder;
+  height: 50px;
+}
+
+.custom-button:hover {
+  background-color: #00b2b2; /* Darker shade on hover */
+  box-shadow: 0 0 10px rgba(0, 233, 233, 0.7), 0 0 40px rgba(0, 233, 233, 0.5); /* More intense glow on hover */
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+.centered-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;    /* Vertically center */
+  height: 100vh;         /* Full viewport height */
+  background: linear-gradient(#9026C8, #410174); /* Gradient background */
+  flex-direction: column;
+}
+
+.container {
+  width: 100%; /* Adjust as needed */
+  text-align: center; /* Center text within the container */
+}
+.auth-choice-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Full height to center vertically */
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient( #9026C8, #410174);
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 250px; /* Adjust size as necessary */
+  margin-bottom: 20px; /* Space below logo */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+}
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px; /* Adjust size as needed */
+  cursor: pointer;
+  position: absolute; /* Positioning above the logo */
+  top: 20px; /* Adjust based on your layout */
+  left: 20px; /* Adjust based on your layout */
+  color: #323232; /* Use your theme color */
+}
+
+.back-button:hover {
+  opacity: 0.8; /* Add hover effect */
+}
+.toggle-text {
+  margin-top: 20px;
+  font-size: 14px; /* Adjust size as needed */
+  color: #ffffff; /* Adjust color as needed */
+  text-align: center;
+}
+
+.hyperlink {
+  color: #2d8cf0; /* Change this to your theme color */
+  cursor: pointer;
+  text-decoration: underline; /* Makes it look like a link */
+}
+
+.hyperlink:hover {
+  text-decoration: none; /* Optional: removes underline on hover */
+}
+
+@media (min-width: 600px) {
+  .button-container {
+    flex-direction: row; /* Stack buttons horizontally on wider screens */
+    justify-content: center; /* Center buttons horizontally */
   }
 }

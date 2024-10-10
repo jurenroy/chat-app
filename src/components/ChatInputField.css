@@ -1,0 +1,37 @@
+/* src/components/ChatInputField.css */
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    background: #f9f9f9;
+  }
+  
+  .chat-input:focus {
+    outline: none;
+    border-color: #00e9e9;
+  }
+  
+  .send-button {
+    padding: 10px 15px;
+    background-color: #00e9e9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .send-button:hover {
+    background-color: #00b2b2;
+  }
+  
